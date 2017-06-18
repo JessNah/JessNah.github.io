@@ -90,11 +90,11 @@ jQuery(document).ready(function() {
 
 
       jQuery("#imgArt").on('mouseenter',function(e){
-  $(this).closest('.owl-carousel').trigger('stop.owl.autoplay');
+//  $(this).closest('.owl-carousel').trigger('stop.owl.autoplay');
   })
 
   jQuery("#imgArt").on('mouseleave',function(e){
-  $(this).closest('.owl-carousel').trigger('play.owl.autoplay');
+//  $(this).closest('.owl-carousel').trigger('play.owl.autoplay');
   })
 
 
