@@ -78,7 +78,7 @@ jQuery(document).ready(function() {
 
     jQuery("#brands-slider").owlCarousel({
         items : 4,
-        itemsDesktop : [1199,4],
+        itemsDesktop : [1199,3],
         itemsDesktopSmall : [979,3],
         itemsTablet: [600,2],
         itemsMobile : [479,1],
@@ -90,11 +90,11 @@ jQuery(document).ready(function() {
 
 
       jQuery("#imgArt").on('mouseenter',function(e){
-//  $(this).closest('.owl-carousel').trigger('stop.owl.autoplay');
+  $(this).closest('.owl-carousel').trigger('stop.owl.autoplay');
   })
 
   jQuery("#imgArt").on('mouseleave',function(e){
-//  $(this).closest('.owl-carousel').trigger('play.owl.autoplay');
+  $(this).closest('.owl-carousel').trigger('play.owl.autoplay');
   })
 
 
