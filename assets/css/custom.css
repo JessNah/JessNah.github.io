@@ -284,18 +284,32 @@ a.custom-btn-1:focus {
 /* ====================================== */
 
 
-.test {
+
+/*@media only screen and (max-width: 900px){
+
+	.test{
+    background-image: url(../img/1.jpg) !important;
+    background-repeat: no-repeat !important;
+    background-position: right -30px bottom 0px !important;
+    background-size: cover !important;
+	}
+}*/
+
+.test{
   background-image: url(../img/1.jpg);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: right center;
+  position: right -20px;
   background-size: cover;
 }
 
+
+
 header {
-/*  background-image: url(../img/1.jpg);
+  /*background-image: url(../img/1.jpg);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover; */
+  background-size: cover;*/
 }
 
 header h1 {
