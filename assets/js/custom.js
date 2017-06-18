@@ -3,11 +3,11 @@
     $(window).load(function() {
       $("#loader .icon").fadeOut();
       $("#loader").fadeOut("slow");
-    }); 
+    });
 
-    //---------------------------------------------------------------- 
+    //----------------------------------------------------------------
 
-jQuery(document).ready(function() {  
+jQuery(document).ready(function() {
 
 
     // Image resize on viewport
@@ -16,15 +16,15 @@ jQuery(document).ready(function() {
 
 	$(window).resize(function(){
 			$(".header-img").height($(window).height());
-	});	
+	});
 
-    //----------------------------------------------------------------    
+    //----------------------------------------------------------------
 
     // Skills progress bar
 
     $(".progress .progress-bar").appear(function () {
         $('.progress .progress-bar').progressbar();
-    });    
+    });
 
     // Smooth Page Scrolling requires - Jquery Easing
 
@@ -34,24 +34,24 @@ jQuery(document).ready(function() {
               scrollTop: $($anchor.attr('href')).offset().top
             }, 1500, 'easeInOutExpo');
         event.preventDefault();
-    }); 
+    });
 
-    //---------------------------------------------------------------- 
+    //----------------------------------------------------------------
 
     // Portfolio sorting
 
     jQuery('#portfolio-items').mixItUp();
 
-    //---------------------------------------------------------------- 
+    //----------------------------------------------------------------
 
     // Milestone counter
-    
+
     jQuery('.counter').counterUp({
         delay: 10,
         time: 3000
     });
 
-    //---------------------------------------------------------------- 
+    //----------------------------------------------------------------
 
     // Reviews slider
 
@@ -68,33 +68,43 @@ jQuery(document).ready(function() {
             navigationText: [
             "<span class='ti-angle-left'></span>",
             "<span class='ti-angle-right'></span>"
-            ],        
-        autoPlay : false        
-    }); 
+            ],
+        autoPlay : false
+    });
 
-    //---------------------------------------------------------------- 
+    //----------------------------------------------------------------
 
     // Reviews slider
 
     jQuery("#brands-slider").owlCarousel({
-        items : 3,
-        itemsDesktop : [1199,3],
+        items : 4,
+        itemsDesktop : [1199,4],
         itemsDesktopSmall : [979,3],
         itemsTablet: [600,2],
         itemsMobile : [479,1],
         slideSpeed : 400,
         mouseDrag: false,
-        pagination : false,       
-        autoPlay : true        
-    }); 
+        pagination : false,
+        autoPlay : true
+    });
 
-    //----------------------------------------------------------------     
+
+      jQuery("#imgArt").on('mouseenter',function(e){
+  $(this).closest('.owl-carousel').trigger('stop.owl.autoplay');
+  })
+
+  jQuery("#imgArt").on('mouseleave',function(e){
+  $(this).closest('.owl-carousel').trigger('play.owl.autoplay');
+  })
+
+
+    //----------------------------------------------------------------
 
     // Animation reveal on scroll
 
     new WOW().init();
 
-    //----------------------------------------------------------------  
+    //----------------------------------------------------------------
 
     // Smooth Page Scrolling requires - Jquery Easing
 
@@ -106,7 +116,7 @@ jQuery(document).ready(function() {
         event.preventDefault();
     });
 
-    //---------------------------------------------------------------- 
+    //----------------------------------------------------------------
 
     // Highlight top nav as scrolling occurs
 
@@ -114,7 +124,7 @@ jQuery(document).ready(function() {
            target: '.navbar-static-top'
     })
 
-    //----------------------------------------------------------------      
+    //----------------------------------------------------------------
 
     // Closes Responsive Menu on Menu Item Click
 
@@ -122,7 +132,7 @@ jQuery(document).ready(function() {
           $('.navbar-toggle:visible').click();
     });
 
-    //---------------------------------------------------------------- 
+    //----------------------------------------------------------------
 
     // Sticky Navigation
 
@@ -133,7 +143,7 @@ jQuery(document).ready(function() {
         });
     });
 
-    //---------------------------------------------------------------- 
+    //----------------------------------------------------------------
 
     // Scroll to top
 
@@ -143,15 +153,15 @@ jQuery(document).ready(function() {
         } else {
             $('.scroll-top').fadeOut();
         }
-    
+
     });
 
-    //----------------------------------------------------------------     
+    //----------------------------------------------------------------
 
     // Contact Form
 
     jQuery('.form-horizontal').on('submit',function(){
-                 
+
         var form = $(this);
         $.ajax({
             url: form.attr('action'),
@@ -159,18 +169,18 @@ jQuery(document).ready(function() {
             data: form.serialize(),
             success: function(result){
                 if (result == 'success'){
-                    $('.send-success').fadeIn().delay(4000).fadeOut();;  
+                    $('.send-success').fadeIn().delay(4000).fadeOut();;
                 } else {
                     $('.send-error').fadeIn().delay(4000).fadeOut();;
                 }
                 $('.form-horizontal').trigger("reset");
             }
           });
-         
-         // Prevents default submission of the form after clicking on the submit button. 
-          return false;   
-    }); 
 
-    //----------------------------------------------------------------                          
+         // Prevents default submission of the form after clicking on the submit button.
+          return false;
+    });
 
-}); 
+    //----------------------------------------------------------------
+
+});
