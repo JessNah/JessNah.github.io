@@ -122,6 +122,21 @@ var right = document.getElementById("right");
     pagination();
   };
 
+  $('#skwObject').on("mousewheel DOMMouseScroll", function(e) {
+    if (scrolling) {
+      e.preventDefault();
+      return;
+    }
+    if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+      navigateUp();
+      e.preventDefault();
+    } else {
+      navigateDown();
+      e.preventDefault();
+    }
+  });
+
+
   // $(document).on("mousewheel DOMMouseScroll", function(e) {
   //   if (scrolling) return;
   //   if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
