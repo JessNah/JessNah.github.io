@@ -6,6 +6,27 @@ body {
 }
 
 
+.left{
+    background-color: Transparent !important;
+    background-repeat:no-repeat;
+    border: none !important;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none !important;
+    z-index: 1000;
+}
+
+.right{
+    background-color: Transparent !important;
+    background-repeat:no-repeat;
+    border: none !important;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none !important;
+    z-index: 1000;
+}
+
+
 
 .flex-container {
   width: 100%;

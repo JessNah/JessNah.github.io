@@ -7,12 +7,16 @@
 .body-skw {
   background: #15181A;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  width: 85%;
+  text-align: center;
+  margin-left: auto ;
+  margin-right: auto ;
 }
 
 .skw-pages {
   overflow: hidden;
   position: relative;
-  height: 80vh;
+  height: 60vh; /* 80 */
 }
 
 .skw-page {
@@ -23,9 +27,15 @@
 }
 .skw-page__half {
   position: absolute;
-  top: 0;
+  /*top: 0;*/
+  margin-left: auto ;
+  margin-right: auto ;
+  margin-right: auto ;
+  margin-top: auto ;
+  text-align: center;
+
   width: 50%;
-  height: 100vh;
+  height: 60vh; /* 80   75..*/
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   transition: transform 1s;
@@ -117,6 +127,7 @@
 }
 .skw-page__link {
   color: #FFA0A0;
+  text-align: center;
 }
 .skw-page-1 .skw-page__half--left .skw-page__content {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/mousover-img-1.jpg");

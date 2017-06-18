@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+
+      console.log(window.screen.availHeight + " x " + window.screen.availWidth);
+
+
+
   var curPage = 1;
   var numOfPages = $(".skw-page").length;
   var animTime = 1000;
