@@ -411,7 +411,39 @@ header .row {
 }
 
 .number {
-  color: #cccccc;
+  color: #cccccc; /*cccccc*/
+  font-family: 'Poppins', arial, sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.number1 {
+  color: #bf7c72; /*cccccc*/
+  font-family: 'Poppins', arial, sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.number2 {
+  color: #a0bf72; /*cccccc*/
+  font-family: 'Poppins', arial, sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.number3 {
+  color: #72bfaa; /*cccccc*/
+  font-family: 'Poppins', arial, sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.number4 {
+  color: #7284bf; /*cccccc*/
   font-family: 'Poppins', arial, sans-serif;
   font-size: 35px;
   font-weight: 400;
