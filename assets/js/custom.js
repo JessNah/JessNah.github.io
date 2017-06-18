@@ -1,11 +1,92 @@
     // Preloader
 
     $(window).load(function() {
+      preloadImage("assets/img/AnimationMe.gif");
       $("#loader .icon").fadeOut();
       $("#loader").fadeOut("slow");
     });
 
     //----------------------------------------------------------------
+
+    // gif animation
+
+    $(function() {
+            $("#meGif").hover(
+                function() {
+                    $(this).attr("src", "assets/img/AnimationMe.gif");
+                },
+                function() {
+                    $(this).attr("src", "assets/img/AnimationMeStatic.png" );
+                }
+            );
+        });
+
+
+
+    function GifOnScroll(){
+      $("#meGif").attr("src", "assets/img/AnimationMe.gif");
+    }
+
+    function isScrolledIntoView(elem)
+    {
+        var docViewTop = $(window).scrollTop();
+        var docViewBottom = docViewTop + $(window).height();
+
+        var elemTop = $(elem).offset().top;
+        var elemBottom = elemTop + $(elem).height();
+
+        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    }
+
+    function Utils() {
+
+    }
+
+    Utils.prototype = {
+        constructor: Utils,
+        isElementInView: function (element, fullyInView) {
+            var pageTop = $(window).scrollTop();
+            var pageBottom = pageTop + $(window).height();
+            var elementTop = $(element).offset().top;
+            var elementBottom = elementTop + $(element).height();
+
+            if (fullyInView === true) {
+                return ((pageTop < elementTop) && (pageBottom > elementBottom));
+            } else {
+                return ((elementTop <= pageBottom) && (elementBottom >= pageTop));
+            }
+        }
+    };
+
+    var Utils = new Utils();
+
+
+    function preloadImage(url)
+      {
+          var img=new Image();
+          img.src=url;
+          console.log("PRELOADED IMAGE");
+      }
+
+
+      var animatedGif = false;
+
+      $(window).on('scroll',function() {
+
+        if(!animatedGif){
+          var isElementInView = Utils.isElementInView($("#meGif"), true);
+
+          if (isElementInView) {
+              GifOnScroll();
+              animatedGif = true;
+              console.log('in view');
+          } else {
+              console.log('out of view');
+          }
+      }
+    });
+
+    // ------------------------------------------------------------------
 
 jQuery(document).ready(function() {
 
@@ -18,7 +99,7 @@ jQuery(document).ready(function() {
 			$(".header-img").height($(window).height());
 	});
 
-    //----------------------------------------------------------------
+  //----------------------------------------------------------------
 
     // Skills progress bar
 
@@ -77,26 +158,16 @@ jQuery(document).ready(function() {
     // Reviews slider
 
     jQuery("#brands-slider").owlCarousel({
-        items : 3,
-        itemsDesktop : [1199,3],
-        itemsDesktopSmall : [979,3],
-        itemsTablet: [600,2],
-        itemsMobile : [479,1],
-        slideSpeed : 400,
-        mouseDrag: false,
-        pagination : false,
-        autoPlay : true
-    });
-
-
-      jQuery("#imgArt").on('mouseenter',function(e){
- $(this).closest('.owl-carousel').trigger('stop.owl.autoplay');
-  })
-
-  jQuery("#imgArt").on('mouseleave',function(e){
-  $(this).closest('.owl-carousel').trigger('play.owl.autoplay');
-  })
-
+       items : 3,
+       itemsDesktop : [1199,3],
+       itemsDesktopSmall : [979,3],
+       itemsTablet: [600,2],
+       itemsMobile : [479,1],
+       slideSpeed : 400,
+       mouseDrag: false,
+       pagination : false,
+       autoPlay : true
+   });
 
     //----------------------------------------------------------------
 
