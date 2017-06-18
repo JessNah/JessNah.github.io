@@ -35,6 +35,17 @@
 	 * content.
 	 */
 }
+
+
+
+@media only screen and (max-width: 1200px){
+
+  .modal-customSize{
+      width:75%;
+  }
+}
+
+
 .modal.modal-fullscreen .modal-dialog,
 .modal.modal-fullscreen .modal-content {
   bottom: 0;
@@ -70,4 +81,3 @@
 .modal.modal-fullscreen.force-fullscreen .modal-header {
   top: 0;
 }
-
