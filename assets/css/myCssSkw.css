@@ -7,7 +7,7 @@
 .body-skw {
   background: #15181A;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  width: 85%;
+  width: 70%;
   text-align: center;
   margin-left: auto ;
   margin-right: auto ;
@@ -16,7 +16,7 @@
 .skw-pages {
   overflow: hidden;
   position: relative;
-  height: 60vh; /* 80 */
+  height: 40vh; /* 80 */
 }
 
 .skw-page {
@@ -35,7 +35,7 @@
   text-align: center;
 
   width: 50%;
-  height: 60vh; /* 80   75..*/
+  height: 40vh; /* 80   75..*/
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   transition: transform 1s;
