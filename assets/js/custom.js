@@ -157,17 +157,45 @@ jQuery(document).ready(function() {
 
     // Reviews slider
 
-    jQuery("#brands-slider").owlCarousel({
-       items : 3,
-       itemsDesktop : [1199,3],
-       itemsDesktopSmall : [979,3],
-       itemsTablet: [600,2],
-       itemsMobile : [479,1],
-       slideSpeed : 400,
-       mouseDrag: false,
-       pagination : false,
-       autoPlay : true
+  //   jQuery("#brands-slider").owlCarousel({
+  //      items : 4,
+  //      itemsDesktop : [1199,4],
+  //      itemsDesktopSmall : [979,3],
+  //      itemsTablet: [600,2],
+  //      itemsMobile : [479,1],
+  //      slideSpeed : 400,
+  //      mouseDrag: false,
+  //      pagination : false,
+  //      autoplayHoverPause: true,
+  //      autoPlay : true,
+  //      autoplayTimeout:1000
+  //  });
+
+
+   var owl =  jQuery("#brands-slider");
+   owl.owlCarousel({
+     items : 8,
+     itemsDesktop : [1199,8],
+     itemsDesktopSmall : [979,4],
+     itemsTablet: [600,3],
+     itemsMobile : [479,2],
+     slideSpeed : 400,
+     mouseDrag: false,
+     pagination : false,
+     autoplayHoverPause: true,
+     autoPlay : true,
+     autoplayTimeout:1000
    });
+   //
+  //  $("#imgArt").on('mouseover', function (e){
+  //    console.log("MOUSEOVER");
+  //      $("#brands-slider").trigger('stop.owl.autoplay');
+  //  });
+   //
+  //  $("#imgArt").on('mouseleave', function (e){
+  //    console.log("START AGA");
+  //      $("#brands-slider").trigger('play.owl.autoplay');
+  //  });
 
     //----------------------------------------------------------------
 
