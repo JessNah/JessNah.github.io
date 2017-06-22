@@ -4,15 +4,20 @@
 
     $(window).load(function() {
       if(!firstTime){
+        console.log("LAUNCH");
         preloadImage("assets/img/AnimationMe.gif");
         $("#loader .icon").fadeOut();
         $("#loader").fadeOut("slow");
-    }
+      }
+      else{
+        $("#loader .icon").fadeOut();
+        $("#loader").fadeOut("slow");
+      }
     });
 
-    $(window).onload(function(){
+    jQuery("#mainHeader").onload = function(){
       firstTime = false;
-    });
+    };
 
     //----------------------------------------------------------------
 
