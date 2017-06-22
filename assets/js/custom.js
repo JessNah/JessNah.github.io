@@ -1,9 +1,17 @@
     // Preloader
 
+    var firstTime = true;
+
     $(window).load(function() {
-      preloadImage("assets/img/AnimationMe.gif");
-      $("#loader .icon").fadeOut();
-      $("#loader").fadeOut("slow");
+      if(!firstTime){
+        preloadImage("assets/img/AnimationMe.gif");
+        $("#loader .icon").fadeOut();
+        $("#loader").fadeOut("slow");
+    }
+    });
+
+    $(window).onload(function(){
+      firstTime = false;
     });
 
     //----------------------------------------------------------------
