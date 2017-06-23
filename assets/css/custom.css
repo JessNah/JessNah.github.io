@@ -307,7 +307,7 @@ a.custom-btn-1:focus {
 @media only screen and (max-width: 650px){
 
 	.onMobile{
-	   background-position: right -70px center !important;
+	   background-position: right -120px center !important;
 	}
 }
 
