@@ -510,6 +510,23 @@ header .row {
   background-color: #383535;
 }
 
+
+.linkedinn a {
+  background-color: #111111;
+  border-radius: 1px;
+  color: #ffffff !important;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin: 14px 0;
+  padding: 10px 30px;
+  transition: all 0.3s ease;
+}
+
+.linkedinn a:hover,
+.linkedinnv a:focus {
+  background-color: #383535;
+}
+
 .info {
   padding: 0px 0px 0px 15px;
 }
